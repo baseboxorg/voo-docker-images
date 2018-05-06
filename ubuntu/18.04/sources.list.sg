@@ -1,0 +1,16 @@
+#------------------------------------------------------------------------------#
+#                            OFFICIAL UBUNTU REPOS                             #
+#------------------------------------------------------------------------------#
+
+# curl https://repogen.simplylinux.ch/txt/bionic/sources_e4c61beff81a7844720bb60fcf573737bf43e733.txt | tee /etc/apt/sources.list
+# curl https://repogen.simplylinux.ch/txt/bionic/gpg_e4c61beff81a7844720bb60fcf573737bf43e733.txt | tee /etc/apt/gpg_keys.txt
+
+###### Ubuntu Main Repos
+deb http://sg.archive.ubuntu.com/ubuntu/ bionic main restricted universe multiverse
+deb-src http://sg.archive.ubuntu.com/ubuntu/ bionic universe
+
+###### Ubuntu Update Repos
+deb http://sg.archive.ubuntu.com/ubuntu/ bionic-security main restricted universe multiverse
+deb http://sg.archive.ubuntu.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb http://sg.archive.ubuntu.com/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src http://sg.archive.ubuntu.com/ubuntu/ bionic-security universe
