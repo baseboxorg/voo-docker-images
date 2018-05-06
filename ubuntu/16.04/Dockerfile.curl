@@ -1,0 +1,14 @@
+FROM ubuntu:16.04
+
+MAINTAINER BaseBoxOrg <baseboxorg@outlook.com>
+
+RUN apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -qq --no-install-recommends -y \
+    ca-certificates \
+    curl \
+    && curl https://repogen.simplylinux.ch/txt/xenial/sources_806805f793ef7777854ea6950b9bddd1e6aeaf58.txt | tee /etc/apt/sources.list \
+    && apt-get update \
+    && apt-get remove -y \
+    ca-certificates \
+    curl \
+    && apt-get autoremove -y
